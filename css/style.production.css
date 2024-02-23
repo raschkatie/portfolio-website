@@ -84,6 +84,20 @@ a:active {
     color: #AC3B61;
 }
 
+.social-media__icon {
+    text-decoration: none;
+    background-color: none;
+    padding: 7px;
+
+    &:hover {
+        background-color: #EEE2DC;
+    }
+
+    &:focus {
+        background-color: #EEE2DC;
+    }
+}
+
 .button {
     border: none;
     display: inline-block;
@@ -209,8 +223,6 @@ button:focus {
     margin-left: 30px;
 }
 
-/* "project-list" in place of "grid" class in exercise */
-
 .project-list__item {
     display: inline-block;
     width: 33%;
@@ -244,19 +256,19 @@ button:focus {
 
     .project-list__item:nth-child(5) {
         -ms-grid-row: 3;
-            grid-row: 3;
+        grid-row: 3;
         -ms-grid-column: 2;
-            grid-column: 2;
+        grid-column: 2;
         -ms-grid-column-span: 2;
         grid-area: 3 / 2 / 3 / 4;
     }
 
     .project-list__item:nth-child(3) {
         -ms-grid-row: 2;
-            grid-row: 2;
+        grid-row: 2;
         -ms-grid-row-span: 2;
         -ms-grid-column: 1;
-            grid-column: 1;
+        grid-column: 1;
         -ms-grid-column-span: 1;
         grid-area: 2 / 1 / 4 / 2;
     }
@@ -340,89 +352,4 @@ button:focus {
     }
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
-}
-
-/* animation for Berlin image */
-
-@-webkit-keyframes color-change {
-    0% {
-        fill: #edc655;
-    }
-    50% {
-        fill: #fcffad;
-    }
-    100% {
-        fill: #f76414;
-    }
-}
-
-@keyframes color-change {
-    0% {
-        fill: #edc655;
-    }
-    50% {
-        fill: #fcffad;
-    }
-    100% {
-        fill: #f76414;
-    }
-}
-
-@-webkit-keyframes cloud-move {
-    from {
-        -webkit-transform: translate(0, 50px);
-                transform: translate(0, 50px);
-    }
-    to {
-        -webkit-transform: translate(200px, 50px);
-                transform: translate(200px, 50px);
-    }
-}
-
-@keyframes cloud-move {
-    from {
-        -webkit-transform: translate(0, 50px);
-                transform: translate(0, 50px);
-    }
-    to {
-        -webkit-transform: translate(200px, 50px);
-                transform: translate(200px, 50px);
-    }
-}
-
-@-webkit-keyframes cloud-move-reverse {
-    from {
-        -webkit-transform: translate(446px, 48px);
-                transform: translate(446px, 48px);
-    }
-    to {
-        -webkit-transform: translate(100px, 40px);
-                transform: translate(100px, 40px);
-    }
-}
-
-@keyframes cloud-move-reverse {
-    from {
-        -webkit-transform: translate(446px, 48px);
-                transform: translate(446px, 48px);
-    }
-    to {
-        -webkit-transform: translate(100px, 40px);
-                transform: translate(100px, 40px);
-    }
-}
-
-.sun {
-    -webkit-animation: 4s color-change infinite alternate linear;
-            animation: 4s color-change infinite alternate linear;
-}
-
-.cloud-front {
-    -webkit-animation: 30s cloud-move infinite alternate linear;
-            animation: 30s cloud-move infinite alternate linear;
-}
-
-.cloud-back {
-    -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-            animation: 34s cloud-move-reverse infinite alternate linear;
 }
