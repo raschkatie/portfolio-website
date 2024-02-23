@@ -72,6 +72,16 @@ a:active {
     color: var(--secondary-color);
 }
 
+.social-media__icon {
+    text-decoration: none;
+    background-color: none;
+    padding: 7px;
+
+    &:hover, &:focus {
+        background-color: var(--light-beige);
+    }
+}
+
 .button, button {
     border: none;
     display: inline-block;
@@ -155,8 +165,6 @@ button:hover, button:focus {
     text-align: left;
     margin-left: 30px;
 }
-
-/* "project-list" in place of "grid" class in exercise */
 
 .project-list__item {
     display: inline-block;
