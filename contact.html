@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="img/logo-katie-rasch.svg">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.production.css">
+        <title>Katie Rasch | Contact</title>
+    </head>
+    
+    <body>
+
+        <header class="page-header">
+            <img src="img/logo-katie-rasch.svg" alt="personal logo for Katie Rasch, with the letters K and R" class="page-header__item">
+            <nav class="main-navigation page-header__item">
+                <ul role="menubar" class="navigation-list">
+                    <li role="presentation">
+                        <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="contact-form">
+            <h1>Contact</h1>
+
+            <div>
+                <p>
+                    Email: <a href="mailto:raschkatie@gmail.com">raschkatie@gmail.com</a>
+                </p>
+                <p>
+                    Phone: <a href="tel:5133759727" aria-label="Call 513-375-9727">513-375-9727</a>
+                </p>
+                <p> <!-- remove before publishing -->
+                    Skype: <a href="skype:live:.cid.8da100550d2b9b90">Katie</a>
+                </p>
+                <a href="mailto:raschkatie@gmail.com">Contact Me</a>
+            </div>
+
+            <form action="" method="post" id="contact-form">
+
+                <p><label class="standard-label" for="contact-email">Email: </label>
+                <input type="email" id="contact-email" placeholder="*required" required></p>
+
+                <p><label class="standard-label" for="contact-phone-number">Telephone: </label>
+                <input type="tel" id="contact-phone-number" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="optional"></p>
+
+                <p><label class="standard-label" for="message-to-katie">Message: </label>
+                <textarea maxlength="240" id="message-to-katie" placeholder="*required" required></textarea></p>
+                
+                <input type="submit" class="button__secondary" value="Send message">
+            </form>
+
+        </main>
+
+        <footer class="page-footer">
+            <p>Find me on</p> <!-- unlinked -->
+            <div class="social-media">
+                <img src="img/github.svg" alt="GitHub">
+                <img src="img/linkedin.svg" alt="LinkedIn">
+                <img src="img/instagram.svg" alt="Instagram">
+            </div>
+        </footer>
+
+        <!-- accessibility / remove before publushing -->
+        <script src="js/tota11y.min.js"></script>
+
+    </body>
+</html>
