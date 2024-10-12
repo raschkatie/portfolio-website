@@ -192,7 +192,7 @@ button:hover, button:focus {
     }
 
     .project-list__item:first-child:hover {
-        background-image: url(../img/project-1-pokedex-1.PNG);
+        background-image: url(../img/project-1-pokedex-1.png);
     }
 
     .project-list__item:nth-child(2) {
@@ -206,7 +206,7 @@ button:hover, button:focus {
     }
     
     .project-list__item:nth-child(3):hover {
-        background-image: url(../img/project-3-myflix-1.PNG);
+        background-image: url(../img/project-3-myflix-1.png);
     }
 
     .project-list__item:nth-child(4) {
@@ -215,7 +215,7 @@ button:hover, button:focus {
     }
 
     .project-list__item:nth-child(4):hover {
-        background-image: url(../img/project-4-meet-app-1.PNG);
+        background-image: url(../img/project-4-meet-app-1.png);
     }
 
     .project-list__item:nth-child(5) {
