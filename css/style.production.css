@@ -238,7 +238,13 @@ button:hover, button:focus {
     }
 
     .project-list__item:nth-child(2) {
-        background-color: var(--dark-beige);
+        background-image: url(../img/project-2-movie-api-70.png);
+        -o-object-fit: cover;
+           object-fit: cover;
+    }
+
+    .project-list__item:nth-child(2):hover {
+        background-image: url(../img/project-2-movie-api-60.png);
     }
 
     .project-list__item:nth-child(3) {
@@ -332,10 +338,6 @@ button:hover, button:focus {
         -ms-grid-columns: 1fr 20px 1fr;
         grid-template-columns: 1fr 1fr;
     }
-
-    .navigation-list li {
-        display: inline-block;
-    }
 }
 
 @media all and (max-width: 750px) {
@@ -361,7 +363,7 @@ button:hover, button:focus {
         font-size: 19px;
     }
 
-    .profile {
+    .profile, .contact-info, .about-info {
         padding: 0 15px 0 15px;
     }
 

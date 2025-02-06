@@ -209,7 +209,12 @@ button:hover, button:focus {
     }
 
     .project-list__item:nth-child(2) {
-        background-color: var(--dark-beige);
+        background-image: url(../img/project-2-movie-api-70.png);
+        object-fit: cover;
+    }
+
+    .project-list__item:nth-child(2):hover {
+        background-image: url(../img/project-2-movie-api-60.png);
     }
 
     .project-list__item:nth-child(3) {
