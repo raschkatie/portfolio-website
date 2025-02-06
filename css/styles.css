@@ -273,7 +273,7 @@ button:hover, button:focus {
         padding-top: 15px;
     }
 
-    .navigation-list {
+    .navigation-list li {
         line-height: 40px;
     }
 }
@@ -301,6 +301,19 @@ button:hover, button:focus {
 
     h1 {
         font-size: 22px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    .profile, .contact-info, .about-info {
+        padding: 0 15px 0 15px;
+    }
+
+    .navigation-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
 

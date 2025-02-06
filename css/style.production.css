@@ -322,7 +322,7 @@ button:hover, button:focus {
         padding-top: 15px;
     }
 
-    .navigation-list {
+    .navigation-list li {
         line-height: 40px;
     }
 }
@@ -331,6 +331,10 @@ button:hover, button:focus {
     .project-list {
         -ms-grid-columns: 1fr 20px 1fr;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .navigation-list li {
+        display: inline-block;
     }
 }
 
@@ -351,6 +355,21 @@ button:hover, button:focus {
 
     h1 {
         font-size: 22px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    .profile {
+        padding: 0 15px 0 15px;
+    }
+
+    .navigation-list {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
