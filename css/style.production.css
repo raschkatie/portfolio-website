@@ -271,7 +271,7 @@ button:hover, button:focus {
         -ms-grid-column: 2;
         -ms-grid-column-span: 2;
         grid-area: 3 / 2 / 3 / 4;
-        background-image: url(../img/project-5-chat-app-40.PNG);
+        background-image: url(../img/project-5-chat-app-40.png);
         -o-object-fit: cover;
            object-fit: cover;
     }

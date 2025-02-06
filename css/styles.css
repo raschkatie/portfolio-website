@@ -233,7 +233,7 @@ button:hover, button:focus {
 
     .project-list__item:nth-child(5) {
         grid-area: 3 / 2 / 3 / 4;
-        background-image: url(../img/project-5-chat-app-40.PNG);
+        background-image: url(../img/project-5-chat-app-40.png);
         object-fit: cover;
     }
 
