@@ -15,7 +15,7 @@
     <body>
 
         <header class="page-header">
-            <img src="img/logo-katie-rasch.svg" alt="personal logo for Katie Rasch, with the letters K and R" class="page-header__item">
+            <img src="img/logo-katie-rasch.svg" alt="personal logo for Katie Rasch, with the letters K and R" class="page-header__item logo">
             <nav class="main-navigation page-header__item">
                 <ul role="menubar" class="navigation-list">
                     <li role="presentation">
@@ -34,11 +34,12 @@
             </nav>
         </header>
 
-        <main class="about-info">
+        <main>
+            <div class="about-info">
             <h1>About</h1>
-            <p>I am a 31 year old graduate from Northern Kentucky University with a major in Media Informatics.</p>
-            <p>I started as a Graphic Designer in the wedding stationery industry.</p>
-            <p>I am currently an incoming web developer.</p>
+            <p>I am a 32 year old graduate from Northern Kentucky University with a bachelor degree in Media Informatics.<br/>
+            I started as a Graphic Designer in the wedding stationery industry.<br/>
+            I am currently an incoming web developer.</p>
             <table>
                 <thead>
                     <tr>
@@ -50,10 +51,10 @@
                 <tbody>
                     <tr>
                         <td>HTML/CSS</td>
-                        <td>1</td>
-                        <td>Beginner</td>
+                        <td>2</td>
+                        <td>Intermediate</td>
                     </tr>
-                    <tr>
+                    <tr class="about-info__odd-row">
                         <td>JavaScript</td>
                         <td>1</td>
                         <td>Beginner</td>
@@ -62,6 +63,11 @@
                         <td>TypeScript</td>
                         <td>1</td>
                         <td>Beginner</td>
+                    </tr>
+                    <tr class="about-info__odd-row">
+                        <td>Adobe InDesign</td>
+                        <td>8</td>
+                        <td>Advanced</td>
                     </tr>
                     <tr>
                         <td>Adobe Illustrator</td>
@@ -72,20 +78,43 @@
             </table>
 
             <p><a href="files/katierasch-cv.pdf" class="button" download>Download my CV</a></p>
+            </div>
 
+            <div class="work-history">
+                <h1>Work History</h1>
+
+                <h2 class="work-history__item">Stationery Works</h2>
+                <h3>Designer</h3>
+                <h4>July 2018 - Present</h4>
+                <p>Combines design skills and attention to detail to create an invitation suite that follows etiquette guidelines while staying within the 
+                    needs and requests of the vendor. Uses Excel, Illustrator and InDesign to data merge lists into guest addressed envelopes.</p>
+
+                <h2 class="work-history__item">M. Hopple & Co.</h2>
+                <h3>Creative Consultant</h3>
+                <h4>February 2017 - July 2018</h4>
+                <p>Honed typography and design skills to create stationery according to customers' tastes. Used Adobe InDesign, Illustrator and  Photoshop 
+                    to provide a clean and professional product for the client.</p>
+
+                <h2 class="work-history__item">Creative Invites and Events</h2>
+                <h3>Graphic Designer</h3>
+                <h4>December 2015 - November 2016</h4>
+                <p>Created designs under a tight deadline. Worked with clients to discover their needs and preferences. Utilized software such as Adobe 
+                    Illustrator, Photoshop, and InDesign to complete designs.</p>
+
+            </div>
         </main>
 
         <footer class="page-footer">
             <p>Find me on</p>
             <div class="social-media">
                 <a href="https://github.com/raschkatie" class="social-media__icon" target="_blank">
-                    <img src="img/github.svg" alt="GitHub">
+                    <img src="img/github-1.svg" alt="GitHub" class="social-media__img">
                 </a>
                 <a href="https://www.linkedin.com/in/katierasch/" class="social-media__icon" target="_blank">
-                    <img src="img/linkedin.svg" alt="LinkedIn">
+                    <img src="img/linkedin-1.svg" alt="LinkedIn" class="social-media__img">
                 </a>
                 <a href="https://www.instagram.com/katiembond/" class="social-media__icon" target="_blank">
-                    <img src="img/instagram.svg" alt="Instagram">
+                    <img src="img/instagram-1.svg" alt="Instagram" class="social-media__img">
                 </a>
             </div>
         </footer>
