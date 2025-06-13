@@ -31,8 +31,6 @@ p {
 
 table {
     margin: 0 auto;
-    width: 100%;
-    max-width: 100%;
     table-layout: fixed;
 }
 
@@ -203,7 +201,11 @@ button:hover, button:focus {
 .about-info {
     padding-bottom: 30px;
     line-height: 1.6;
-    margin: 0 25% 0 25%;
+    margin: 0;
+}
+
+.about-bio {
+    margin: 0 25%;
 }
 
 th, td {
@@ -215,7 +217,7 @@ th, td {
 }
 
 .work-history {
-    margin: 0 28% 0 28%;
+    margin: 0 26% 0 26%;
 }
 
 .work-history__item {
@@ -225,6 +227,33 @@ th, td {
 li {
     text-align: left;
     padding-top: 10px;
+    line-height: 1.6;
+}
+
+.about-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 30px auto;
+    padding: 0 8%;
+}
+
+.skills-section {
+    flex: 1.25;
+}
+.education-section {
+    flex: 0.75;
+    min-width: 0;
+}
+
+.education-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.education-section li {
+    margin-bottom: 20px;
+    text-align: left;
     line-height: 1.6;
 }
 
@@ -238,6 +267,21 @@ li {
 
 .project-list__item-image {
     width: 100%;
+}
+
+.project-list__item:hover {
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: white;
+
+    h2 {
+        color: var(--primary-color);
+    }
+
+    a:hover {
+        color: white;
+    }
+    transition: all var(--transition-speed-slow);
 }
 
 @supports (display: grid) {
@@ -322,6 +366,16 @@ li {
     }
 }
 
+@media (max-width: 768px) {
+    .about-grid {
+        flex-direction: column;
+    }
+
+    .education-section li {
+        text-align: center;
+    }
+}
+
 @media all and (min-width: 500px) and (max-width: 750px) {
     .project-list {
         grid-template-columns: 1fr 1fr;
@@ -372,16 +426,19 @@ li {
     }
 
     .about-info {
-        margin: 0 8% 0 8%;
+        margin: 0;
+    }
+
+    .about-bio {
+        margin: 0 6% 0 6%;
     }
 
     .work-history {
-        margin: 0 8% 0 8%;
+        margin: 0 6% 0 6%;
         padding-top: 40px;
     }
-    
 
-    .profile, .contact-info, .about-info {
+    .profile, .contact-info {
         padding: 0 15px 0 15px;
     }
 
@@ -398,19 +455,4 @@ li {
     .skill-table td {
         font-size: 11px;
     }
-}
-
-.project-list__item:hover {
-    cursor: pointer;
-    background-color: var(--accent-color);
-    color: white;
-
-    h2 {
-        color: var(--primary-color);
-    }
-
-    a:hover {
-        color: white;
-    }
-    transition: all var(--transition-speed-slow);
 }
