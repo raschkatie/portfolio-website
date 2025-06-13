@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/style.production.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
         <title>Katie Rasch | Projects</title>
     </head>
 
@@ -40,42 +40,71 @@
                 <div class="project-list__item">
                     <h2>Movie API</h2>
                     <img src="img/project-2-movie-api.PNG" class="project-list__item-image">
-                    <p>This project's goal was to manually set up an API for the MyFlix project. The API is a database of movies where users can create an account, update their account, or remove their account, and view movie data from the database such as the director or genre of a single movie.</p>
+                    <p>
+                        Movie API is a RESTful backend built with <strong>Node.js</strong> and <strong>Express</strong> that 
+                        provides access to a movie database, including films, directors, genres, and user data. It uses 
+                        <strong>MongoDB</strong> with Mongoose for data storage and supports user authentication with JWT and password hashing.
+                    </p>
+
                     <a href="https://github.com/raschkatie/movie_api" target="_blank" class="button">See project on GitHub</a>
-                </div>
-                <div class="project-list__item">
-                    <h2>MyFlix Client</h2>
-                    <img src="img/project-3-myflix.PNG" class="project-list__item-image">
-                    <p>MyFlix Client is the client-side web application that allows users to access movie information such as the title, description, director, and genre. Users are also able to create an account, update their account, add and remove favorite movies from their account list, and delete their account.</p>
-                    <a href="https://github.com/raschkatie/myFlix-client" target="_blank" class="button">See project on GitHub</a>
-                    <a href="https://myflix-kr.netlify.app/login" target="_blank" class="button">See live project</a>
                 </div>
                 <div class="project-list__item">
                     <h2>MyFlix Angular Client</h2>
                     <img src="img/project-6-angular-client.PNG" class="project-list__item-image">
-                    <p>This app is similar to the MyFlix Client that was an earlier project, and uses the same Movie API, but it uses Angular instead of focusing on React, while having all of the same features.</p>
-                    <a href="https://github.com/raschkatie/myFlix-Angular-client" target="_blank" class="button">See project on GitHub</a>
-                    <a href="https://raschkatie.github.io/myFlix-Angular-app/" target="_blank" class="button">See live project</a>
+                    <p>
+                        MyFlix Angular Client is a single-page application built with <strong>Angular</strong> that connects to the 
+                        MyFlix API to display movie data. Users can register, update their profiles, and manage a list of favorite films. 
+                        The app uses <strong>Angular Material</strong> for UI components and <strong>RxJS</strong> for handling asynchronous data.
+                    </p>
+                    <a href="https://github.com/raschkatie/MyFlix-Angular-client" target="_blank" class="button">See project on GitHub</a>
+                    <a href="https://raschkatie.github.io/MyFlix-Angular-app/" target="_blank" class="button">See live project</a>
+                </div>
+                <div class="project-list__item">
+                    <h2>S3 Upload App</h2>
+                    <img src="img/project-7-s3-upload-app.PNG" class="project-list__item-image">
+                    <p>
+                        S3 Upload App is a full-stack image uploader built with <strong>Node.js</strong>, <strong>Express</strong>, and 
+                        <strong>AWS S3</strong>. Users can upload images to an S3 bucket, where a <strong>Lambda</strong> function automatically resizes 
+                        them and stores thumbnails. The app demonstrates integration of AWS services like <strong>S3</strong>, <strong>Lambda</strong>, and 
+                        <strong>IAM</strong> using the AWS SDK and CLI.
+                    </p>
+                    <div class="button-group">
+                        <a href="https://github.com/raschkatie/s3-upload-app" target="_blank" class="button">See project on GitHub</a>
+                        <a href="https://github.com/raschkatie/image-resizer" target="_blank" class="button">See Lambda files on GitHub</a>
+                        <a href="case-studies/s3-upload-app.html" class="button">View Case Study</a>
+                    </div>
                 </div>
                 <div class="project-list__item">
                     <h2>React PWA</h2>
                     <img src="img/project-4-meet-app.PNG" class="project-list__item-image">
-                    <p>The Meet App is a serverless progressive web application (PWA) with React mostly using a test-driven development (TDD) technique. The application uses the Google Calendar API to fetch upcoming events.</p>
+                    <p>
+                        Meet is a progressive web app (PWA) built with <strong>React</strong> that allows users to browse and filter upcoming 
+                        tech events by city. It integrates with the <strong>Google Calendar API</strong> and <strong>OAuth2</strong> for authentication, 
+                        and includes data visualization with <strong>Recharts</strong> to show event stats. The app works offline and can be installed on mobile devices.
+                    </p>
                     <a href="https://github.com/raschkatie/meet" target="_blank" class="button">See project on GitHub</a>
                     <a href="https://raschkatie.github.io/meet/" target="_blank" class="button">See live project</a>
                 </div>
                 <div class="project-list__item">
                     <h2>Chat App</h2>
                     <img src="img/project-5-chat-app.png" class="project-list__item-image">
-                    <p>The Chat App is an application for mobile devices that provides users with a chat interface that has options for sharing images and their location. It was created using React Native, Expo, and Google Firestore Database.</p>
+                    <p>
+                        Chat App is a mobile messaging app built with <strong>React Native</strong> and <strong>Expo</strong> that lets users send text, 
+                        images, and their location in real time. It uses <strong>Firebase</strong> for authentication, cloud storage, and database functionality. 
+                        The app is optimized for both Android and iOS devices.
+                    </p>
                     <a href="https://github.com/raschkatie/chat-app" target="_blank" class="button">See project on GitHub</a>
                 </div>
                 <div class="project-list__item">
-                    <h2>Pokedex App</h2>
-                    <img src="img/project-1-pokedex.PNG" class="project-list__item-image">
-                    <p>The Pokédex app is a list of Pokémon that includes the name, height, and type of each item.</p>
-                    <a href="https://github.com/raschkatie/simple-js-app" target="_blank" class="button">See project on GitHub</a>
-                    <a href="https://raschkatie.github.io/simple-js-app/" target="_blank" class="button">See live project</a>
+                    <h2>MyFlix Client</h2>
+                    <img src="img/project-3-myflix.PNG" class="project-list__item-image">
+                    <p>
+                        MyFlix Client is the front-end for a movie database app, built with <strong>React</strong>. It allows 
+                        users to browse movies, view detailed information, and manage their accounts and favorite films. The 
+                        app communicates with a <strong>Node.js</strong>/<strong>Express</strong> API and uses React Router for navigation.
+                    </p>
+                    <a href="https://github.com/raschkatie/MyFlix-client" target="_blank" class="button">See project on GitHub</a>
+                    <a href="https://myflix-kr.netlify.app/login" target="_blank" class="button">See live project</a>
                 </div>
             </div>
         </main>
