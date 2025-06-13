@@ -23,6 +23,7 @@ body {
     background-color: var(--light-color);
     color: var(--primary-color);
     text-align: center;
+    margin: 0;
 }
 
 p {
@@ -31,6 +32,9 @@ p {
 
 table {
     margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    table-layout: fixed;
 }
 
 h1 {
@@ -127,6 +131,7 @@ a:active {
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
     transition-property: background-color, color;
     transition-duration: var(--transition-speed);
+    margin-bottom: 5px;
 }
 
 .button:hover, .button:focus,
@@ -163,19 +168,24 @@ button:hover, button:focus {
 /* home page settings */
 
 .profile__portrait {
-    float: left;
     width: 250px;
-    margin-right: 40px;
     border-radius: 10px;
     box-shadow: -15px 15px 0px 0px var(--accent-color);
 }
 
-.profile {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-    padding-top: 5%;
+.profile__info {
+    flex: 1;
 }
+
+.profile {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 5%;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
 
 #about-picture {
     width: 550px;
@@ -194,9 +204,10 @@ button:hover, button:focus {
 .about-info {
     padding-bottom: 30px;
     line-height: 1.6;
+    margin: 0 25% 0 25%;
 }
 
-th {
+th, td {
     padding: 0 10px 0 10px;
 }
 
@@ -212,7 +223,13 @@ th {
     padding-top: 25px;
 }
 
-/* work page settings */
+li {
+    text-align: left;
+    padding-top: 10px;
+    line-height: 1.6;
+}
+
+/* project page settings */
 
 .project-list__item {
     display: inline-block;
@@ -241,6 +258,40 @@ th {
     }
 }
 
+/* case study page settings */
+
+.case-study-nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--light-color);
+    padding: 10px 20px;
+    z-index: 1000;
+    text-align: left;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.back-button {
+    background-color: var(--medium-color);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background-color: var(--accent-color);
+    color: var(--light-color);
+}
+
+.case-study {
+    margin: 0 auto;
+}
+
+.case-study__item {
+    max-width: 70%;
+    display: block;
+    align-items: center;
+    margin: 0 auto;
+}
+
 /* mobile settings */
 
 @media all and (max-width: 500px) {
@@ -265,7 +316,6 @@ th {
 
     .profile__portrait {
         margin: 0 auto;
-        /* padding-top: 15px; */
     }
 
     .navigation-list li {
@@ -307,19 +357,19 @@ th {
     }
 
     h1 {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     h2 {
-        font-size: 19px;
+        font-size: 25px;
     }
 
     h3 {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     h4 {
-        font-size: 15px;
+        font-size: 18px;
     }
 
     .about-info {
@@ -340,6 +390,14 @@ th {
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: 0;
+    }
+
+    .skill-table th{
+        font-size: 13px;
+    }
+
+    .skill-table td {
+        font-size: 11px;
     }
 }
 
