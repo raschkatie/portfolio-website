@@ -257,6 +257,10 @@ li {
     line-height: 1.6;
 }
 
+.education-section h1 {
+    text-align: left;
+}
+
 /* project page settings */
 
 .project-list__item {
@@ -372,6 +376,10 @@ li {
     }
 
     .education-section li {
+        text-align: center;
+    }
+
+    .education-section h1 {
         text-align: center;
     }
 }
