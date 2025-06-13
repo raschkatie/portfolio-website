@@ -468,4 +468,9 @@ li {
     .skill-table td {
         font-size: 11px;
     }
+
+    .case-study__item {
+        width: 100%;
+        max-width: 100%;
+    }
 }
