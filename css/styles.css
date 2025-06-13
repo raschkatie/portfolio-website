@@ -368,6 +368,11 @@ li {
     .navigation-list li {
         line-height: 40px;
     }
+
+    .case-study__item {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
