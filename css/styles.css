@@ -23,7 +23,6 @@ body {
     background-color: var(--light-color);
     color: var(--primary-color);
     text-align: center;
-    margin: 0;
 }
 
 p {
