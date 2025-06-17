@@ -238,6 +238,15 @@ li {
     padding: 0 8%;
 }
 
+.about-bio p,
+.project-list__item p,
+.profile__info p {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
 .skills-section {
     flex: 1.25;
 }
@@ -379,6 +388,12 @@ li {
     .about-grid {
         flex-direction: column;
     }
+
+    .about-bio p,
+    .project-list__item p,
+    .profile__info p {
+        padding: 0 1rem;
+    }    
 
     .education-section li {
         text-align: center;

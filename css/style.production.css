@@ -39,8 +39,6 @@ p {
 
 table {
     margin: 0 auto;
-    width: 100%;
-    max-width: 100%;
     table-layout: fixed;
 }
 
@@ -235,7 +233,11 @@ button:hover, button:focus {
 .about-info {
     padding-bottom: 30px;
     line-height: 1.6;
-    margin: 0 25% 0 25%;
+    margin: 0;
+}
+
+.about-bio {
+    margin: 0 25%;
 }
 
 th, td {
@@ -247,7 +249,7 @@ th, td {
 }
 
 .work-history {
-    margin: 0 28% 0 28%;
+    margin: 0 26% 0 26%;
 }
 
 .work-history__item {
@@ -260,6 +262,54 @@ li {
     line-height: 1.6;
 }
 
+.about-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 40px;
+    margin: 30px auto;
+    padding: 0 8%;
+}
+
+.about-bio p,
+.project-list__item p,
+.profile__info p {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+.skills-section {
+    -webkit-box-flex: 1.25;
+        -ms-flex: 1.25;
+            flex: 1.25;
+}
+.education-section {
+    -webkit-box-flex: 0.75;
+        -ms-flex: 0.75;
+            flex: 0.75;
+    min-width: 0;
+}
+
+.education-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.education-section li {
+    margin-bottom: 20px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.education-section h1 {
+    text-align: left;
+}
+
 /* project page settings */
 
 .project-list__item {
@@ -270,6 +320,22 @@ li {
 
 .project-list__item-image {
     width: 100%;
+}
+
+.project-list__item:hover {
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: white;
+
+    h2 {
+        color: var(--primary-color);
+    }
+
+    a:hover {
+        color: white;
+    }
+    -webkit-transition: all var(--transition-speed-slow);
+    transition: all var(--transition-speed-slow);
 }
 
 @supports (display: grid) {
@@ -363,6 +429,34 @@ li {
     .navigation-list li {
         line-height: 40px;
     }
+
+    .case-study__item {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    .about-bio p,
+    .project-list__item p,
+    .profile__info p {
+        padding: 0 1rem;
+    }    
+
+    .education-section li {
+        text-align: center;
+    }
+
+    .education-section h1 {
+        text-align: center;
+    }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
@@ -416,16 +510,19 @@ li {
     }
 
     .about-info {
-        margin: 0 8% 0 8%;
+        margin: 0;
+    }
+
+    .about-bio {
+        margin: 0 6% 0 6%;
     }
 
     .work-history {
-        margin: 0 8% 0 8%;
+        margin: 0 6% 0 6%;
         padding-top: 40px;
     }
-    
 
-    .profile, .contact-info, .about-info {
+    .profile, .contact-info {
         padding: 0 15px 0 15px;
     }
 
@@ -444,20 +541,9 @@ li {
     .skill-table td {
         font-size: 11px;
     }
-}
 
-.project-list__item:hover {
-    cursor: pointer;
-    background-color: var(--accent-color);
-    color: white;
-
-    h2 {
-        color: var(--primary-color);
+    .case-study__item {
+        width: 100%;
+        max-width: 100%;
     }
-
-    a:hover {
-        color: white;
-    }
-    -webkit-transition: all var(--transition-speed-slow);
-    transition: all var(--transition-speed-slow);
 }
