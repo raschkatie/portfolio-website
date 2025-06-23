@@ -32,14 +32,22 @@
                 </li>
             </ul>
         </nav>
+
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
     </header>
+
+    <div class="overlay"></div>
 
     <div class="case-study-nav">
         <a href="../projects.html" class="button back-button">Back to Projects</a>
     </div>
 
     <main>
-        <div class="case-study">
+        <div class="case-study fade-in">
             <img 
                 src="../img/s3-upload-case-study/s3-upload-case-study-01.png" 
                 alt="Slide 1 - AWS Cloud Computing Project Title Card" 
@@ -98,5 +106,7 @@
         </div>
     </main>
     
+    <script src="../js/fade-in-scroll.js"></script>
+    <script src="../js/hamburger-menu.js"></script>
 </body>
 </html>
