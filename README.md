@@ -33,6 +33,32 @@ This portfolio includes:
 - Project buttons that dynamically adapt layout across devices
 - Case study page styled for a smooth scroll-based presentation
 
+## ✉️ Contact Form Feature
+
+This site includes a fully custom-built, full-stack contact form that allows visitors to send messages directly to my inbox.
+
+### ✅ Features:
+
+- Responsive layout with mobile-first styling
+- Client-side form validation
+- Animated success/error modal
+- Loading modal with spinner and helpful messaging
+- Secure form submission using `fetch()`
+- Backend built with Node.js + Express
+- Emails sent using SendGrid API
+- Deployed backend on Render
+- Environment variables used to secure credentials
+- CORS configured for both local dev and production
+- Error fallback handling and Gmail spam filter workaround
+
+### 🌐 Live Demo:
+
+[https://katierasch.com/contact](https://katierasch.com/contact)
+
+### 🛠️ Backend Repo:
+
+[GitHub: contact-backend](https://github.com/raschkatie/contact-backend)
+
 ## 🚀 Getting Started
 
 If you'd like to clone this repo and run it locally:
