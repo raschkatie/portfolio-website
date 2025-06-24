@@ -670,6 +670,10 @@ li {
     .profile {
         margin: 0 30px;
     }
+
+    .work-history {
+        margin: 0 10%;
+    }
 }
 
 @media all and (min-width: 751px) {
@@ -692,9 +696,5 @@ li {
 
     .about-bio {
         margin: 0 5%;
-    }
-
-    .work-history {
-        margin: 0 10%;
     }
 }
