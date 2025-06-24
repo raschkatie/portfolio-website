@@ -220,7 +220,7 @@ button:hover, button:focus {
 }
 
 .profile {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding-top: 5%;
   display: flex;
@@ -558,7 +558,7 @@ li {
 
 @media all and (min-width: 500px) and (max-width: 750px) {
     .project-list {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .profile__portrait {
@@ -648,6 +648,7 @@ li {
 
     .hamburger {
         display: flex;
+        margin-bottom: 40px;
     }
 
     .main-navigation {
@@ -673,7 +674,23 @@ li {
 
     .navigation-list li {
         display: block;
-        margin: 10px 0;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .main-navigation .navigation-list__item {
+        font-size: 21px;
+        margin-right: 32px;
+    }
+}
+
+@media all and (min-width: 675px) and (max-width: 1130px) {
+    .project-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .profile {
+        margin: 0 50px;
     }
 }
 
@@ -687,8 +704,21 @@ li {
     }
 
     .education__item {
-        font-size: 17px;
+        font-size: 19px;
     }
+
+    .about-grid {
+        flex-direction: column;
+    }
+
+    .education-section li {
+        text-align: center;
+    }
+
+    .education-section h1 {
+        text-align: center;
+    }
+
 }
 
 @media all and (min-width: 751px) {
