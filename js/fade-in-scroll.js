@@ -1,4 +1,5 @@
 const faders = document.querySelectorAll('.fade-in');
+const fastFaders = document.querySelectorAll('.fade-in-fast');
 
 const appearOptions = {
   threshold: 0.1,
@@ -14,5 +15,9 @@ const appearOnScroll = new IntersectionObserver(function(entries, observer) {
 }, appearOptions);
 
 faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+
+fastFaders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
