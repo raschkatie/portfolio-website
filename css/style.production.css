@@ -344,10 +344,6 @@ button:hover, button:focus {
     margin: 0;
 }
 
-.about-bio {
-    margin: 0 25%;
-}
-
 th, td {
     padding: 0 10px 0 10px;
 }
@@ -357,7 +353,7 @@ th, td {
 }
 
 .work-history {
-    margin: 0 26% 0 26%;
+    margin: 0 15% 0 15%;
 }
 
 .work-history__item {
@@ -388,7 +384,7 @@ li {
     text-align: left;
     margin-left: auto;
     margin-right: auto;
-    max-width: 700px;
+    max-width: 900px;
 }
 
 .skills-section {
@@ -743,7 +739,7 @@ li {
     }
 
     .about-bio {
-        margin: 0 6% 0 6%;
+        margin: 0 6%;
     }
 
     .work-history {
@@ -836,6 +832,10 @@ li {
     .case-study__item {
         width: 100%;
         max-width: 100%;
+    }
+
+    .about-bio {
+        margin: 0 5%;
     }
 }
 
