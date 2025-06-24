@@ -47,19 +47,43 @@
 
         <main class="contact-info fade-in">
             <h1>Contact</h1>
-            <div>
-                <p>Thanks for checking out my portfolio!</p>
-                <p>Please feel free to reach me using any of the options below.</p>
-                <p>I look forward to hearing from you!</p>
-                <p>
-                    Email: <a href="mailto:raschkatie@gmail.com">raschkatie@gmail.com</a>
-                </p>
-                <p>
-                    Phone: <a href="tel:5133759727" aria-label="Call 513-375-9727">513-375-9727</a>
-                </p>
-                <a href="mailto:raschkatie@gmail.com">Contact Me</a>
-            </div>
+            <p>I'd love to hear from you! Please feel free to reach out using the form below.</p>
+            
+            <form class="contact-form" id="contactForm">
+                <input type="hidden" name="form-name" value="contact" />
+
+                <label for="name">Name*</label>
+                <input type="text" id="name" name="name" placeholder="required" required />
+
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" placeholder="required" required />
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" />
+
+                <label for="message">Message*</label>
+                <textarea id="message" name="message" rows="5" placeholder="required" required></textarea>
+
+                <button type="submit" class="button shimmer">Send Message</button>
+            </form>
         </main>
+
+        <!-- Form Modal Message -->
+        <div id="form-modal" class="form-modal hidden">
+            <div class="form-modal__content">
+                <p id="form-modal-message"><!-- Message inserted by JS below --></p>
+                <button id="form-modal-close" class="button">Okay</button>
+            </div>
+        </div>
+
+        <!-- Loading Modal -->
+        <div id="loading-modal" class="form-modal hidden">
+            <div class="form-modal__content">
+                <div class="spinner" aria-hidden="true"></div>
+                <p><strong>Sending your message...</strong></p>
+                <p>This may take up to 30 seconds. Thanks for your patience!</p>
+            </div>
+        </div>
 
         <footer class="page-footer">
             <p>Find me on</p>
@@ -75,5 +99,62 @@
 
         <script src="js/fade-in-scroll.js"></script>
         <script src="js/hamburger-menu.js"></script>
+
+        <!-- Contact Form Submission -->
+        <script>
+            const loadingModal = document.getElementById('loading-modal');
+            const form = document.getElementById('contactForm');
+            const modal = document.getElementById('form-modal');
+            const modalMessage = document.getElementById('form-modal-message');
+            const modalClose = document.getElementById('form-modal-close');
+
+            function hideModal(delay = 300) {
+                modal.classList.add('fade-out');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('fade-out');
+                }, delay);
+            }
+
+            modalClose.addEventListener('click', hideModal);
+
+            form.addEventListener('submit', async function(event) {
+                event.preventDefault();
+
+                loadingModal.classList.remove('hidden');
+
+                const formData = {
+                    name: this.name.value,
+                    email: this.email.value,
+                    subject: this.subject.value,
+                    message: this.message.value
+                };
+
+                try {
+                    const response = await fetch('https://contact-backend-q41u.onrender.com/contact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(formData)
+                    });
+
+                    const result = await response.json();
+                    console.log('result received: ', result);
+
+                    loadingModal.classList.add('hidden');
+
+                    modalMessage.textContent = 'Thanks for reaching out! Your message has been sent.';
+                    modal.classList.remove('hidden');
+
+                    setTimeout(hideModal, 5000);
+
+                    this.reset();
+                } catch (error) {
+                    loadingModal.classList.add('hidden');
+                    modalMessage.textContent = 'Oops! Something went wrong. Please try again.';
+                    modal.classList.remove('hidden');
+                    console.error('Form submission error: ', error);
+                }
+            });
+        </script>
     </body>
 </html>
