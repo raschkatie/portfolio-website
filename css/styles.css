@@ -35,23 +35,27 @@ table {
 }
 
 h1 {
-    font-size: 35px;
+    font-size: 40px;
     font-weight: var(--font-bold);
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 29px;
     font-weight: var(--font-bold);
     color: var(--accent-color)
 }
 
 h3 {
-    font-size: 19px;
+    font-size: 25px;
 }
 
 h4 {
-    font-size: 16px;
+    font-size: 20px;
     color: var(--accent-color);
+}
+
+.education__item {
+    font-size: 20px;
 }
 
 /* header / nav settings */
@@ -590,21 +594,24 @@ li {
     }
 
     h1 {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     h2 {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     h3 {
-        font-size: 20px;
+        font-size: 27px;
     }
 
     h4 {
-        font-size: 18px;
+        font-size: 21px;
     }
 
+    .education__item {
+        font-size: 19px;
+    }
     .about-info {
         margin: 0;
     }
@@ -620,6 +627,10 @@ li {
 
     .profile, .contact-info {
         padding: 0 15px 0 15px;
+    }
+
+    .profile {
+        margin: 0 15px;
     }
 
     .skill-table th{
@@ -673,6 +684,10 @@ li {
 
     .work-history {
         margin: 0 10%;
+    }
+
+    .education__item {
+        font-size: 17px;
     }
 }
 
