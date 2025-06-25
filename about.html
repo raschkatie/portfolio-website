@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/style.production.css">
         <title>Katie Rasch | About</title>
     </head>
     
@@ -75,6 +75,8 @@
                 <div class="about-grid">
                     <div class="skills-section fade-in">
                         <h1>Skills</h1>
+                        
+                        <!-- desktop view -->
                         <div class="skill-table">
                             <table>
                                 <thead>
@@ -123,8 +125,54 @@
                                 </tbody>
                             </table>
                         </div>
+
+                        <!-- mobile view -->
+                        <div class="skills-collapsible fade-in">
+                            <details>
+                                <summary>Languages & Frameworks</summary>
+                                <div class="details-content">
+                                    <ul>
+                                        <li>HTML / CSS</li>
+                                        <li>JavaScript</li>
+                                        <li>TypeScript</li>
+                                        <li>React</li>
+                                        <li>Angular</li>
+                                        <li>Node.js / Express</li>
+                                        <li>MongoDB</li>
+                                    </ul>
+                                </div>
+                            </details>
+                            <details>
+                                <summary>Tools & Platforms</summary>
+                                <div class="details-content">
+                                    <ul>
+                                        <li>Git / GitHub</li>
+                                        <li>AWS (EC2, S3, Lambda)</li>
+                                        <li>Postman</li>
+                                        <li>Command Line / Bash</li>
+                                        <li>Adobe Illustrator / InDesign</li>
+                                        <li>VS Code</li>
+                                    </ul>
+                                </div>
+                            </details>
+                            <details>
+                                <summary>Development Skills</summary>
+                                <div class="details-content">
+                                    <ul>
+                                        <li>Responsive Design</li>
+                                        <li>REST APIs</li>
+                                        <li>JWT Authentication</li>
+                                        <li>UI / UX Principles</li>
+                                        <li>Accessibility</li>
+                                        <li>Image Uploads</li>
+                                        <li>Infrastructure-as-Code</li>
+                                    </ul>
+                                </div>
+                            </details>
+                        </div>
                     </div>
 
+                    <!-- education section -->
                     <div class="education-section fade-in">
                         <h1>Education</h1>
                         <ul>
@@ -148,6 +196,7 @@
                 </div>
             </div>
 
+            <!-- work history -->
             <div class="work-history fade-in">
                 <h1>Professional Experience</h1>
 
@@ -195,5 +244,7 @@
 
         <script src="js/fade-in-scroll.js"></script>
         <script src="js/hamburger-menu.js"></script>
+        <script src="js/skills-accordion.js"></script>
+
     </body>
 </html>
