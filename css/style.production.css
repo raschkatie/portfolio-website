@@ -473,11 +473,6 @@ li {
     max-width: 900px;
 }
 
-.skills-section {
-    -webkit-box-flex: 1.25;
-        -ms-flex: 1.25;
-            flex: 1.25;
-}
 .education-section {
     -webkit-box-flex: 0.75;
         -ms-flex: 0.75;
@@ -498,6 +493,83 @@ li {
 
 .education-section h1 {
     text-align: left;
+}
+
+/* skills */
+
+.skills-section {
+    -webkit-box-flex: 1.25;
+        -ms-flex: 1.25;
+            flex: 1.25;
+}
+
+.skill-table td {
+    line-height: 2.2;
+}
+
+.skills-collapsible {
+    display: none;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.skills-collapsible summary {
+    position: relative;
+    font-weight: var(--font-bold);
+    font-size: 18px;
+    padding: 10px 40px 10px 10px;
+    background-color: var(--medium-color);
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.skills-collapsible summary::after {
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
+    -webkit-transition: -webkit-transform 0.4s ease;
+    transition: -webkit-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+
+.skills-collapsible summary.rotate::after {
+    -webkit-transform: translateY(-50%) rotate(180deg);
+            transform: translateY(-50%) rotate(180deg);
+}
+
+.skills-collapsible ul {
+    margin: 0 0 35px 50px;
+    padding: 0;
+    list-style-type: disc;
+}
+
+.skills-collapsible li {
+    margin: 5px 0;
+}
+
+.details-content {
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height 0.4s ease, opacity 0.4s ease;
+    transition: height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+}
+
+details[open] .details-content {
+    opacity: 1;
+}
+
+details summary {
+    list-style-type: none;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
 }
 
 /* project page settings */
@@ -595,7 +667,7 @@ li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 9px;
+    gap: 13px;
     background: none;
     border: none;
     cursor: pointer;
@@ -603,12 +675,12 @@ li {
     z-index: 1003;
     -webkit-box-shadow: none;
             box-shadow: none;
-    margin-top: 25px;
-    margin-right: 10px;
+    margin-top: 35px;
+    margin-right: 18px;
 }
 
 .hamburger-line {
-    width: 45px;
+    width: 50px;
     height: 2px;
     background-color: var(--primary-color);
     -webkit-transition: all 0.3s ease;
@@ -637,8 +709,8 @@ li {
 }
 
 .hamburger.open .hamburger-line:nth-child(1) {
-    -webkit-transform: rotate(45deg) translate(7.75px, 7.75px);
-            transform: rotate(45deg) translate(7.75px, 7.75px);
+    -webkit-transform: rotate(45deg) translate(10.5px, 10.5px);
+            transform: rotate(45deg) translate(10.5px, 10.5px);
 }
 
 .hamburger.open .hamburger-line:nth-child(2) {
@@ -646,8 +718,8 @@ li {
 }
 
 .hamburger.open .hamburger-line:nth-child(3) {
-    -webkit-transform: rotate(-45deg) translate(7.75px, -7.75px);
-            transform: rotate(-45deg) translate(7.75px, -7.75px);
+    -webkit-transform: rotate(-45deg) translate(10.5px, -10.5px);
+            transform: rotate(-45deg) translate(10.5px, -10.5px);
 }
 
 .hamburger,
@@ -822,10 +894,7 @@ li {
         padding: 0 1rem;
     }    
 
-    .education-section li {
-        text-align: center;
-    }
-
+    .education-section li,
     .education-section h1 {
         text-align: center;
     }
@@ -899,12 +968,21 @@ li {
     .education__item {
         font-size: 19px;
     }
+
     .about-info {
         margin: 0;
     }
 
     .about-bio {
         margin: 0 6%;
+    }
+
+    .skill-table {
+        display: none;
+    }
+
+    .skills-collapsible {
+        display: block;
     }
 
     .work-history {
@@ -918,14 +996,6 @@ li {
 
     .profile {
         margin: 0 15px;
-    }
-
-    .skill-table th{
-        font-size: 13px;
-    }
-
-    .skill-table td {
-        font-size: 11px;
     }
 
     .case-study__item {
@@ -1015,6 +1085,24 @@ li {
         max-width: 700px;
     }
 
+    .about-grid {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    .education-section {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    .education-section li,
+    .education-section h1 {
+        text-align: center;
+    }
+
 }
 
 @media all and (min-width: 750px) and (max-width: 831px) {
@@ -1035,6 +1123,14 @@ li {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
+    }
+
+    .skill-table {
+        display: none;
+    }
+
+    .skills-collapsible {
+        display: block;
     }
 
     .education-section li {
