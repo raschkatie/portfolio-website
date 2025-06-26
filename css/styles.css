@@ -787,6 +787,13 @@ details summary::-webkit-details-marker {
 
     h1 {
         font-size: 35px;
+        margin-top: 0px;
+    }
+
+    main > h1,
+    .about-info > .about-bio > h1,
+    .contact-info > h1 {
+        margin-top: 0;
     }
 
     h2 {
@@ -813,6 +820,14 @@ details summary::-webkit-details-marker {
         margin: 0 6%;
     }
 
+    .work-history h2,
+    .work-history h3,
+    .work-history h4 {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        line-height: .7;
+    }
+
     .skill-table {
         display: none;
     }
@@ -823,7 +838,6 @@ details summary::-webkit-details-marker {
 
     .work-history {
         margin: 0 6% 0 6%;
-        padding-top: 40px;
     }
 
     .profile, .contact-info {
@@ -880,6 +894,10 @@ details summary::-webkit-details-marker {
         margin-right: 30px;
         padding-left: 0;
         white-space: nowrap;
+    }
+
+    .fade-in {
+        margin-top: 0;
     }
 }
 
