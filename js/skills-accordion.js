@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
             allDetails.forEach((other) => {
                 if (other !== detail && other.hasAttribute("open")) {
                     const otherContent = other.querySelector(".details-content");
+                    const otherSummary = other.querySelector("summary");
+
                     otherContent.style.height = otherContent.scrollHeight + "px";
                     requestAnimationFrame(() => {
                         otherContent.style.height = "0px";
@@ -26,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     otherContent.addEventListener("transitionend", function handleClose(e) {
                         if (e.propertyName === "height" && parseInt(otherContent.style.height) === 0) {
                             other.removeAttribute("open");
+                            otherSummary.classList.remove("rotate");
                             otherContent.removeEventListener("transitionend", handleClose);
                         }
                     });
