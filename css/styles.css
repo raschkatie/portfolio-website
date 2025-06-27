@@ -825,7 +825,7 @@ details summary::-webkit-details-marker {
     .work-history h4 {
         padding-bottom: 0;
         margin-bottom: 0;
-        line-height: .7;
+        line-height: 1;
     }
 
     .skill-table {
@@ -845,7 +845,7 @@ details summary::-webkit-details-marker {
     }
 
     .profile {
-        margin: 0 15px;
+        margin: 40px 15px;
     }
 
     .case-study__item {
