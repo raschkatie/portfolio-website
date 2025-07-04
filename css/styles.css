@@ -569,6 +569,10 @@ details summary::-webkit-details-marker {
     margin: 0 auto;
 }
 
+.case-study__item:last-child {
+    margin-bottom: 50px;
+}
+
 /* hamburger menu */
 
 .hamburger {
